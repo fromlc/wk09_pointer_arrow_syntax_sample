@@ -12,7 +12,7 @@
 //    If a class instance allocates heap memory, delete it in
 //	  the destructor.
 //  
-//	- Every time you use allocate memory with the new operator, 
+//	- Every time you allocate memory with the new operator, 
 //	  you should use the delete operator to free that memory.
 // 
 //	- Exception: when an app terminates, the OS (usually, *not always*)
