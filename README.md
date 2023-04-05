@@ -1,0 +1,1 @@
+# wk09_pointer_arrow_syntax_sample
