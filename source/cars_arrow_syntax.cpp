@@ -4,6 +4,33 @@
 // Demos pointer arrow syntax with 
 //	- Car class
 //	- Engine class aggregated by Car
+//	- EngineSpecs class aggregated by Engine
+// 
+// Demos freeing dynamic (heap) memory with delete operator.
+//	- Local (stack) instance variables are deleted automatically -
+//	  the destructor gets invoked when they go out of scope.
+//    If a class instance allocates heap memory, delete it in
+//	  the destructor.
+//  
+//	- Every time you use allocate memory with the new operator, 
+//	  you should use the delete operator to free that memory.
+// 
+//	- Exception: when an app terminates, the OS (usually, *not always*)
+//	  reclaims all heap memory the app allocated. Windows reclaims
+//	  heap memory, Linux distros generally reclaim app memory, but
+//	  you should not rely on the OS to prevent memory leaks! Use a
+//	  small test driver to allocate a large amount of memory, then
+//    run the driver alongside a system memory monitor like Windows
+//	  Task Manager to make sure heap memory is reclaimed when the 
+//	  driver terminates.
+//	  
+//	- Best practice: after you delete a pointer, set its value to nullptr.
+//	  For example:
+// 
+//		Car* pCar = new Car;
+//		// ... work with pCar data ...
+//		delete pCar;
+//		pCar = nullptr;
 //------------------------------------------------------------------------------
 #include "Car.h"
 
